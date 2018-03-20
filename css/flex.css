@@ -1,0 +1,36 @@
+.animationWrap {
+	display: none;
+}
+.flex-box {
+	width: 700px;
+	height: 400px;
+	background: red;
+	margin: 100px auto; 
+	display: flex;
+	justify-content: center;/*  flex-start, 
+								flex-end - расположит в начале или конце оси
+								center - все по-центру
+								space-between - по ширине на равные части от начала оси
+								space-around - по ширине на равные части не от оси*/
+	/*flex-direction: column; /*row - расположение в строку
+							row-reverse - поменялся порядок блоков от 4 до 1
+							column - расположение в колонку
+							column-reverse - поменялся порядок блоков в колонку от 4 до 1*/
+	align-items: center;/*расположение по вертикальной оси*/
+	flex-wrap: nowrap;/*wrap - перенос будет на след. строку (если перенос был то дальше работает align-items)
+						nowrap - переноса не будет (если переноса не было то дальше работает flex-wrap)*/ 
+}
+.flex-box .flex-item {
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	font-size: 20px;
+	background: blue;
+	border: 1px black solid;
+	margin-right: 20px;
+}
+.flex-box .flex-item:nth-child(4) {
+	align-self: flex-start;
+}
